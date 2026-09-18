@@ -206,13 +206,16 @@ Para estudantes que desejarem ampliar a aplicação, poderão ser implementadas 
 ## Entrega
 É desejável que você crie o projeto no git, preferencialmente gerenciando o versionamento do seu projeto com esta ferramenta. O projeto deverá ser entregue contendo, no mínimo:
 
+```
 gerenciador-tarefas/
-│
-├── index.html
 ├── css/
-│   └── style.css
-└── js/
-    └── script.js
+│   ├── style.css
+├── js/
+│   └── script.js
+├── img/
+│   └── 
+└── index.html
+```
 
 O projeto deverá funcionar abrindo o arquivo index.html no navegador, podendo ter tantas páginas html quanto você julgue necessário.
 O código deverá ser organizado e possuir nomes de variáveis, funções e elementos que permitam compreender sua finalidade. Comentários sempre são desejáveis.
