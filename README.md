@@ -1,7 +1,5 @@
 # gerenciador_tarefas
 
-Gerenciador de tarefas para o curso de Desenvolvimento Front-end
-
 1. Contextualização
 Manter uma rotina organizada pode ser um desafio quando existem diversas atividades para realizar ao longo do dia. Uma forma simples de melhorar essa organização é utilizar uma lista de tarefas, na qual seja possível registrar as atividades, definir suas prioridades e acompanhar o que já foi concluído.
 Neste exercício, você deverá desenvolver uma aplicação web chamada Gerenciador de Tarefas, utilizando exclusivamente HTML, CSS e JavaScript.
@@ -223,5 +221,3 @@ gerenciador-tarefas/
     └── script.js
 O projeto deverá funcionar abrindo o arquivo index.html no navegador, podendo ter tantas páginas html quanto você julgue necessário.
 O código deverá ser organizado e possuir nomes de variáveis, funções e elementos que permitam compreender sua finalidade. Comentários sempre são desejáveis.
-<img width="482" height="717" alt="image" src="https://github.com/user-attachments/assets/ad09e3f3-0c88-4515-b2b6-e0ddd132951d" />
-
