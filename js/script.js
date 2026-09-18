@@ -134,6 +134,7 @@ function filtrarTarefas() {
 function criarCardTarefa(tarefa) {
   const item = document.createElement('article');
   item.className = `task-item${tarefa.concluida ? ' concluida' : ''}`;
+  item.setAttribute('role', 'listitem');
 
   const top = document.createElement('div');
   top.className = 'task-top';
@@ -168,11 +169,16 @@ function criarCardTarefa(tarefa) {
   toggleBtn.type = 'button';
   toggleBtn.className = 'secondary';
   toggleBtn.textContent = tarefa.concluida ? 'Marcar como pendente' : 'Marcar como concluída';
+  toggleBtn.setAttribute(
+    'aria-label',
+    `${tarefa.concluida ? 'Marcar como pendente' : 'Marcar como concluída'}: ${tarefa.descricao}`
+  );
 
   const deleteBtn = document.createElement('button');
   deleteBtn.type = 'button';
   deleteBtn.className = 'danger';
   deleteBtn.textContent = 'Excluir';
+  deleteBtn.setAttribute('aria-label', `Excluir tarefa: ${tarefa.descricao}`);
 
   actions.appendChild(toggleBtn);
   actions.appendChild(deleteBtn);
@@ -203,12 +209,14 @@ function renderizarLista() {
   listaTarefasEl.innerHTML = '';
 
   if (tarefas.length === 0) {
-    listaTarefasEl.innerHTML = '<p class="empty">Nenhuma tarefa cadastrada. Adicione uma tarefa para começar!</p>';
+    listaTarefasEl.innerHTML =
+      '<p class="empty" role="listitem">Nenhuma tarefa cadastrada. Adicione uma tarefa para começar!</p>';
     return;
   }
 
   if (tarefasVisiveis.length === 0) {
-    listaTarefasEl.innerHTML = '<p class="empty">Nenhuma tarefa encontrada com os filtros selecionados.</p>';
+    listaTarefasEl.innerHTML =
+      '<p class="empty" role="listitem">Nenhuma tarefa encontrada com os filtros selecionados.</p>';
     return;
   }
 
