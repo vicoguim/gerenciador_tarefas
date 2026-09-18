@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Gerenciador de Tarefas</h1>
+
+    <section class="card">
+      <h2>Cadastro de tarefa</h2>
+      <form id="task-form" novalidate>
+        <div class="form-grid">
+          <label>
+            Descrição
+            <input id="descricao" name="descricao" type="text" placeholder="Ex.: Estudar JavaScript" required>
+          </label>
+
+          <label>
+            Categoria
+            <select id="categoria" name="categoria" required>
+              <option value="">Selecione</option>
+              <option value="Estudos">Estudos</option>
+              <option value="Trabalho">Trabalho</option>
+              <option value="Pessoal">Pessoal</option>
+              <option value="Casa">Casa</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </label>
+
+          <label>
+            Prioridade
+            <select id="prioridade" name="prioridade" required>
+              <option value="">Selecione</option>
+              <option value="baixa">Baixa</option>
+              <option value="media">Média</option>
+              <option value="alta">Alta</option>
+            </select>
+          </label>
+
+          <label>
+            Data de conclusão
+            <input id="data" name="data" type="date" required>
+          </label>
+        </div>
+
+        <p id="form-error" class="error" aria-live="polite"></p>
+        <button type="submit">Cadastrar tarefa</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Filtros</h2>
+      <div class="filters">
+        <label>
+          Situação
+          <select id="filtro-status">
+            <option value="todas">Todas</option>
+            <option value="pendentes">Pendentes</option>
+            <option value="concluidas">Concluídas</option>
+          </select>
+        </label>
+
+        <label>
+          Categoria
+          <select id="filtro-categoria">
+            <option value="todas">Todas</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Resumo</h2>
+      <ul class="stats">
+        <li>Total de tarefas: <strong id="total-tarefas">0</strong></li>
+        <li>Tarefas pendentes: <strong id="pendentes-tarefas">0</strong></li>
+        <li>Tarefas concluídas: <strong id="concluidas-tarefas">0</strong></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Tarefas</h2>
+      <div id="lista-tarefas" class="task-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
