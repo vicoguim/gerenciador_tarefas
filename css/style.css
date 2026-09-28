@@ -31,6 +31,12 @@ h1 {
   margin-bottom: 16px;
 }
 
+.form-add {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .form-grid,
 .filters {
   display: grid;
@@ -70,6 +76,19 @@ button:hover {
   min-height: 1.2em;
   color: #b91c1c;
   margin: 8px 0 0;
+  background: #fef2f2;
+  padding: 6px 12px;
+  border: 1px solid #fca5a5;
+  display: none;
+}
+
+.ok{
+  min-height: 1.2em;
+  color: #166534;
+  margin: 8px 0 0;
+  background: #dcfce7;
+  padding: 6px 12px;
+  border: 1px solid #bbf7d0;
 }
 
 .stats {

@@ -12,43 +12,47 @@
 
     <section class="card">
       <h2>Cadastro de tarefa</h2>
-      <form id="task-form" novalidate>
-        <div class="form-grid">
-          <label>
-            Descrição
-            <input id="descricao" name="descricao" type="text" placeholder="Ex.: Estudar JavaScript" required>
+      <form id="tarefa-add-form">
+        <div class="form-add">
+          <div id="form-error" class="error"></div>
+          <label for="titulo">
+            Título
+            <input id="titulo" name="titulo" type="text" placeholder="Ex.: Estudar JavaScript" required>
           </label>
 
-          <label>
+          <label for="descricao">
+            Descrição
+            <textarea id="descricao" name="descricao" placeholder="Ex.: Estudar os conceitos de funções, objetos e arrays" rows="8" required></textarea>
+          </label>
+
+          <label for="categoria">
             Categoria
             <select id="categoria" name="categoria" required>
-              <option value="">Selecione</option>
-              <option value="Estudos">Estudos</option>
-              <option value="Trabalho">Trabalho</option>
-              <option value="Pessoal">Pessoal</option>
-              <option value="Casa">Casa</option>
-              <option value="Outros">Outros</option>
+              <option value="0">Selecione</option>
+              <option value="1">Estudos</option>
+              <option value="2">Trabalho</option>
+              <option value="3">Pessoal</option>
+              <option value="4">Casa</option>
+              <option value="5">Outros</option>
             </select>
           </label>
 
-          <label>
+          <label for="prioridade">
             Prioridade
             <select id="prioridade" name="prioridade" required>
-              <option value="">Selecione</option>
-              <option value="baixa">Baixa</option>
-              <option value="media">Média</option>
-              <option value="alta">Alta</option>
+              <option value="0">Selecione</option>
+              <option value="1">Baixa</option>
+              <option value="2">Média</option>
+              <option value="3">Alta</option>
             </select>
           </label>
 
-          <label>
+          <label for="data">
             Data de conclusão
             <input id="data" name="data" type="date" required>
           </label>
         </div>
-
-        <p id="form-error" class="error" aria-live="polite"></p>
-        <button type="submit">Cadastrar tarefa</button>
+        <button type="button" id="cadatrar">Cadastrar tarefa</button>
       </form>
     </section>
 
